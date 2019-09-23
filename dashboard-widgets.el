@@ -355,7 +355,8 @@ If MESSAGEBUF is not nil then MSG is also written in message buffer."
   (when (file-exists-p banner)
     (let* ((title dashboard-banner-logo-title)
            (spec
-            (if (image-type-available-p 'imagemagick)
+            ;; (if (image-type-available-p 'imagemagick)
+            (if nil
                 (apply 'create-image banner 'imagemagick nil
                        (append (when (> dashboard-image-banner-max-width 0)
                                  (list :max-width dashboard-image-banner-max-width))
